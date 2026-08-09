@@ -1,0 +1,14 @@
+{
+  "name": "flightnerve-examples",
+  "version": "1.0.0",
+  "description": "Example client and scripts for the FlightNerve flight tracking API",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "status": "node examples/flight_status.js",
+    "position": "node examples/live_position.js",
+    "airspace": "node examples/airspace.js"
+  },
+  "homepage": "https://flightnerve.com",
+  "license": "MIT"
+}
