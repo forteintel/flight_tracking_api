@@ -6,7 +6,7 @@ Every request takes your API key in the path: `/<endpoint>/<api_key>?param=value
 
 Note: the JSON field names below (for example `departureDateTime`, `groundSpeed`) are returned by the API exactly as shown.
 
-## Flight status: /airline
+## Flight status
 
 Full schedule, route, aircraft and status for a single flight on a given date.
 
@@ -50,7 +50,7 @@ Example response:
 
 Status values: `Scheduled`, `In Air`, `Arrived`, `Delayed`, `Cancelled`, `Diverted`. The same endpoint answers for past, present and future dates. If a flight does not operate on the requested day, a `400` is returned.
 
-## Live position: /track
+## Live position
 
 Where the aircraft is right now: latitude, longitude, altitude, ground speed, heading, plus `phase` and `progress`. Returns an empty array `[]` if the flight is not airborne (a completed flight, one not yet departed, or a future date). Billed one credit per position returned, so a flight that is not in the air costs nothing.
 
@@ -86,7 +86,7 @@ Example response (airborne):
 
 `source` is `live` (a real fix), `partner` (a derived fix filling a coverage gap), or `estimated` (dead reckoned along the route when no fix is available).
 
-## Flight schedules: /schedules
+## Flight schedules
 
 The projected timetable for a flight over the coming days, built from FlightNerve's own accumulated operating history for that flight. One entry per day: route, scheduled departure and arrival (local and UTC), block time and typical aircraft, and whether the flight is expected to operate that weekday.
 
@@ -127,7 +127,7 @@ Example response:
 
 `confidence` is `high`, `medium`, or `low`. Billed one credit per operating day returned; days with no service are free.
 
-## Airports: /airport
+## Airports
 
 Look up an airport, search by name or city, or find airports near a coordinate, from a reference of 85,000+ airports worldwide with coordinates and timezone.
 
@@ -151,7 +151,7 @@ curl "https://api.flightnerve.com/airport/YOUR_API_KEY?code=DXB"
 }
 ```
 
-## Live airspace: /airspace
+## Live airspace
 
 Every aircraft in the air right now in an area: near a point, inside a bounding box, around an airport, or inbound to an airport with a live ETA.
 
@@ -177,7 +177,7 @@ curl "https://api.flightnerve.com/airspace/YOUR_API_KEY?inbound=JFK"
   ] }
 ```
 
-## Routes: /route
+## Routes
 
 Answers four route questions from FlightNerve's own accumulated operating history, each enriched with the aircraft types actually seen and any codeshare flight numbers.
 
@@ -207,7 +207,7 @@ curl "https://api.flightnerve.com/route/YOUR_API_KEY?from=DXB&to=LHR"
   ] }
 ```
 
-## Tracked flights: /watch
+## Tracked flights
 
 Keep a personal watchlist of flights. Each is monitored continuously and returns three arrival anchors: the scheduled time, the FlightNerve estimated arrival, and the live observed arrival, plus `cancelled`, `diverted` and `arrived` flags.
 

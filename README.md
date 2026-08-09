@@ -72,13 +72,13 @@ export FLIGHTNERVE_API_KEY="your_key_here"
 
 | Endpoint | What it does | Key parameters |
 |----------|--------------|----------------|
-| [`GET /airline`](docs/ENDPOINTS.md#flight-status-airline) | Flight status: schedule, route, aircraft, live status | `name`, `num`, `date?`, `depap?` |
-| [`GET /track`](docs/ENDPOINTS.md#live-position-track) | Live position of an airborne flight | `name`, `num`, `date?` |
-| [`GET /schedules`](docs/ENDPOINTS.md#flight-schedules-schedules) | Projected timetable over N days | `name`, `num`, `date?`, `days?` |
-| [`GET /airport`](docs/ENDPOINTS.md#airports-airport) | Airport lookup, search, or nearest | `code` or `search` or `lat`+`lon`+`radius?` |
-| [`GET /airspace`](docs/ENDPOINTS.md#live-airspace-airspace) | Live airspace in an area or inbound | `lat`+`lon` or `bbox` or `airport` or `inbound` |
-| [`GET /route`](docs/ENDPOINTS.md#routes-route) | Routes: route detail, network, destinations | `from`+`to` or `airline` or `from` or `to` or `name`+`num` |
-| [`GET/POST /watch`](docs/ENDPOINTS.md#tracked-flights-watch) | Tracked flights watchlist with arrival anchors | `flight`, `date?`, `leg?` |
+| [`GET /airline`](docs/ENDPOINTS.md#flight-status) | Flight status: schedule, route, aircraft, live status | `name`, `num`, `date?`, `depap?` |
+| [`GET /track`](docs/ENDPOINTS.md#live-position) | Live position of an airborne flight | `name`, `num`, `date?` |
+| [`GET /schedules`](docs/ENDPOINTS.md#flight-schedules) | Projected timetable over N days | `name`, `num`, `date?`, `days?` |
+| [`GET /airport`](docs/ENDPOINTS.md#airports) | Airport lookup, search, or nearest | `code` or `search` or `lat`+`lon`+`radius?` |
+| [`GET /airspace`](docs/ENDPOINTS.md#live-airspace) | Live airspace in an area or inbound | `lat`+`lon` or `bbox` or `airport` or `inbound` |
+| [`GET /route`](docs/ENDPOINTS.md#routes) | Routes: route detail, network, destinations | `from`+`to` or `airline` or `from` or `to` or `name`+`num` |
+| [`GET/POST /watch`](docs/ENDPOINTS.md#tracked-flights) | Tracked flights watchlist with arrival anchors | `flight`, `date?`, `leg?` |
 
 Full request and response detail for each is in [docs/ENDPOINTS.md](docs/ENDPOINTS.md) and on [flightnerve.com/doc](https://flightnerve.com/doc/).
 
