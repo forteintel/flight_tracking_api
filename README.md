@@ -1,12 +1,20 @@
-# FlightNerve flight tracking API: examples and client libraries
+# FlightNerve Flight Tracking API
 
-Copy paste examples and thin client libraries for the [FlightNerve](https://flightnerve.com) flight tracking API. Real time flight status, live aircraft position, flight schedules, airport data, live airspace, and routes, all as clean JSON from one REST call.
+A developer resource for the [FlightNerve](https://flightnerve.com) flight tracking API: real time **flight status**, **live aircraft position**, **flight schedules**, **airport data**, **live airspace**, and **routes**, all as clean JSON from one REST call. Guides, edge cases, a full endpoint reference, and ready to run code in Python, JavaScript and cURL.
 
 [![Docs](https://img.shields.io/badge/docs-flightnerve.com%2Fdoc-0ea5a4)](https://flightnerve.com/doc/)
 [![Get an API key](https://img.shields.io/badge/get%20a%20key-free-ff5a1f)](https://flightnerve.com/register/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-> This repository contains only client examples and documentation (Python, JavaScript/Node, and cURL) for the public FlightNerve REST API. There is no server code and no API keys here. Bring your own key from [flightnerve.com](https://flightnerve.com/register/). The free tier needs no card.
+> Public, open resource for the FlightNerve REST API. It documents how to track flights with the API and how to handle real world edge cases, with runnable code. There is no server code and no API keys here. Bring your own key from [flightnerve.com](https://flightnerve.com/register/). The free tier needs no card.
+
+## Guides
+
+Start here. These are the core of this repository:
+
+* **[How to track a flight with an API](docs/FLIGHT_TRACKING.md)**: track a flight by number, read its live position, compute an ETA, watch every aircraft inbound to an airport, build a live map, and follow a flight to arrival with a watchlist and webhooks.
+* **[Flight tracking API edge cases](docs/EDGE_CASES.md)**: multi leg flights, codeshares, IATA vs ICAO codes, cancellations, diversions, delays, flights that cross midnight, coverage gaps, timezones, charter flights, and error handling. How the API behaves in each, so your integration does not guess.
+* **[Endpoint reference](docs/ENDPOINTS.md)**: every endpoint, its parameters and an example response.
 
 ## What is FlightNerve?
 
@@ -24,7 +32,7 @@ Base URL: `https://api.flightnerve.com`. Full reference: [flightnerve.com/doc](h
 
 ## Quickstart
 
-Get a free key at [flightnerve.com/register](https://flightnerve.com/register/), then:
+Get a free key at [flightnerve.com/register](https://flightnerve.com/register/), then track a flight in one call:
 
 **cURL**
 
@@ -62,7 +70,7 @@ The API key goes in the path, not a header:
 https://api.flightnerve.com/<endpoint>/<api_key>?param=value
 ```
 
-Keep your key out of source control. The examples read it from the `FLIGHTNERVE_API_KEY` environment variable. Copy [`.env.example`](.env.example) to `.env` and drop your key in.
+Keep your key out of source control. The code here reads it from the `FLIGHTNERVE_API_KEY` environment variable. Copy [`.env.example`](.env.example) to `.env` and drop your key in.
 
 ```bash
 export FLIGHTNERVE_API_KEY="your_key_here"
@@ -82,22 +90,26 @@ export FLIGHTNERVE_API_KEY="your_key_here"
 
 Full request and response detail for each is in [docs/ENDPOINTS.md](docs/ENDPOINTS.md) and on [flightnerve.com/doc](https://flightnerve.com/doc/).
 
-## Examples in this repo
+## Ready to run code
+
+A thin client and one runnable script per endpoint, in three languages:
 
 ```
 python/
   flightnerve.py            client (requests)
-  examples/                 one runnable script per endpoint
+  examples/                 one script per endpoint
 javascript/
-  flightnerve.js            tiny fetch based client (Node 18+)
+  flightnerve.js            fetch based client (Node 18+)
   examples/
 curl/
-  examples.sh               cURL one liners for every endpoint
+  examples.sh               cURL calls for every endpoint
 docs/
-  ENDPOINTS.md              per endpoint reference
+  FLIGHT_TRACKING.md        guide: how to track a flight
+  EDGE_CASES.md             guide: real world edge cases
+  ENDPOINTS.md              endpoint reference
 ```
 
-Run the Python examples:
+Run the Python scripts:
 
 ```bash
 cd python
@@ -106,7 +118,7 @@ export FLIGHTNERVE_API_KEY="your_key_here"
 python examples/flight_status.py
 ```
 
-Run the JavaScript examples:
+Run the JavaScript scripts:
 
 ```bash
 cd javascript
@@ -127,9 +139,11 @@ node examples/flight_status.js
 
 **Do I need a credit card?** No. Create an account, generate a key, and you get free call credits immediately.
 
-**What flight number format?** Airline code plus digits. For example `EK72` is `name=EK` (IATA) or `name=UAE` (ICAO) with `num=72`.
+**What flight number format?** Airline code plus digits. For example `EK72` is `name=EK` (IATA) or `name=UAE` (ICAO) with `num=72`. Leading zeros do not matter (`EK072` is `EK72`).
 
-**Which dates work?** `/airline` and `/schedules` answer for past, present and future dates (`YYYYMMDD`). `/track` only returns a position for a flight that is airborne right now.
+**Which dates work?** `/airline` and `/schedules` answer for past, present and future dates (`YYYYMMDD`). `/track` only returns a position for a flight that is airborne right now. See the [edge cases guide](docs/EDGE_CASES.md#past-present-and-future-dates).
+
+**A flight returned a 400. Why?** The flight does not operate on that date, or the airline code or number is wrong. See [flights that do not operate](docs/EDGE_CASES.md#flights-that-do-not-operate-on-a-date).
 
 **What does a call cost?** One credit per call (per leg for multi leg flights, per operating day for `/schedules`). A `/track` for a flight that is not airborne returns `[]` and costs nothing.
 
@@ -142,4 +156,4 @@ node examples/flight_status.js
 
 ## License
 
-[MIT](LICENSE). Use these examples freely. FlightNerve and the FlightNerve API are property of FlightNerve. Your use of the API is governed by the [FlightNerve terms](https://flightnerve.com/terms/).
+[MIT](LICENSE). Use this freely. FlightNerve and the FlightNerve API are property of FlightNerve. Your use of the API is governed by the [FlightNerve terms](https://flightnerve.com/terms/).
