@@ -157,3 +157,5 @@ node examples/flight_status.js
 ## License
 
 [MIT](LICENSE). Use this freely. FlightNerve and the FlightNerve API are property of FlightNerve. Your use of the API is governed by the [FlightNerve terms](https://flightnerve.com/terms/).
+
+_Last reviewed: 2026-08-09._

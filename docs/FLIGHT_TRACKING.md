@@ -184,3 +184,5 @@ Pair a watchlist with a webhook so your system is pushed an update when a flight
 * [Edge cases guide](EDGE_CASES.md)
 * [FlightNerve API documentation](https://flightnerve.com/doc/)
 * [Get a free API key](https://flightnerve.com/register/)
+
+_Last reviewed: 2026-08-09._
