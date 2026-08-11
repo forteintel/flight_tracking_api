@@ -56,9 +56,10 @@ class FlightNerve:
 
     # ----- endpoints -----
 
-    def flight_status(self, name, num, date=None, dep_airport=None):
-        """GET /airline. Full schedule, route, aircraft and live status for one flight."""
-        return self._get("airline", name=name, num=num, date=date, depap=dep_airport)
+    def flight_status(self, name, num, date=None, dep_airport=None, arr_airport=None):
+        """GET /airline. Full schedule, route, aircraft and live status for one flight.
+        dep_airport (depap) pins the leg leaving that airport; arr_airport (arrap) pins the leg arriving there."""
+        return self._get("airline", name=name, num=num, date=date, depap=dep_airport, arrap=arr_airport)
 
     def live_position(self, name, num, date=None):
         """GET /track. Live position of an airborne flight. Empty list if not airborne."""

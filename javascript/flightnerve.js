@@ -69,8 +69,9 @@ export class FlightNerve {
   // ----- endpoints -----
 
   // GET /airline. Schedule, route, aircraft and live status for one flight.
-  flight_status({ name, num, date, depap } = {}) {
-    return this._get("airline", { name, num, date, depap });
+  // depap pins the leg leaving that airport; arrap pins the leg arriving there (transit).
+  flight_status({ name, num, date, depap, arrap } = {}) {
+    return this._get("airline", { name, num, date, depap, arrap });
   }
 
   // GET /track. Live position of an airborne flight. Empty array if not airborne.

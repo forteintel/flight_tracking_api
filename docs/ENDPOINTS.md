@@ -17,9 +17,18 @@ Full schedule, route, aircraft and status for a single flight on a given date.
 | `num` | required | Flight number, digits only (for example `72` for EK72). |
 | `name` | required | Airline code, IATA (`EK`) or ICAO (`UAE`). |
 | `date` | optional | Target date, `YYYYMMDD`. Defaults to the active or next instance. |
-| `depap` | optional | Departure airport IATA. Picks one leg of a multi leg flight (the leg departing this airport). |
+| `depap` | optional | Departure airport IATA. Picks the leg of a multi leg or multi route flight that **departs** this airport. |
+| `arrap` | optional | Arrival airport IATA. Picks the leg that **arrives** at this airport. Useful for a transit, where you want the inbound flight into a hub. A flight number can serve several routes in a day (for example `UA1956` arrives Houston from Las Vegas but also flies Houston to Fort Lauderdale); `arrap=IAH` returns the leg that lands at IAH. |
 
-Some flight numbers cover more than one leg. For example `EK205` flies DXB, MXP, JFK. Called without `depap`, a multi leg flight returns all legs as an array and is billed one credit per leg.
+Some flight numbers cover more than one leg. For example `EK205` flies DXB, MXP, JFK. Called without `depap`, a multi leg flight returns all legs as an array and is billed one credit per leg. When a number operates more than one leg on a date and you pin none, each returned leg carries `legsDetected` (the leg count) and a `note` telling you which `depap` / `arrap` values target a specific leg.
+
+**Transit tip:** to track a connection, pin each side by its airport: `depap=<hub>` for the flight leaving the hub, `arrap=<hub>` for the flight arriving at it.
+
+**Codeshares.** When you query a marketing flight number operated by another airline (for example `LH8784`, sold by Lufthansa but operated by United as `UA1812`), the response resolves to the operating flight and adds `marketedAs` and `operatedBy` to the status object, so a booking made on the marketing number reconciles to the flight that actually flies, with the correct times:
+
+```json
+{ "status": "Scheduled", "marketedAs": "LH8784", "operatedBy": "UA1812" }
+```
 
 ```bash
 curl "https://api.flightnerve.com/airline/YOUR_API_KEY?num=72&name=EK&date=20260720"
@@ -162,7 +171,7 @@ Every aircraft in the air right now in an area: near a point, inside a bounding 
 | `lat` and `lon` | Aircraft within `radius` km of a point (default 100, max 500), nearest first. |
 | `bbox` | Aircraft inside `latMin,lonMin,latMax,lonMax`. |
 | `airport` | Aircraft within `radius` km of an airport (IATA or ICAO). |
-| `inbound` | Airborne aircraft routed to this airport, with distance and estimated minutes out. |
+| `inbound` | Airborne aircraft routed to this airport, with distance and estimated minutes out. Includes scheduled airlines and private / business aviation (business jets and charters) heading to the airport, useful for meet and greet and ground transport into a hub or FBO. |
 
 ```bash
 curl "https://api.flightnerve.com/airspace/YOUR_API_KEY?inbound=JFK"
