@@ -2,6 +2,7 @@
 
 The guides and endpoint reference on this page are reviewed on a regular cadence. Most recent touch points (newest first):
 
+- 2026-08-23: reviewed. Tip: /schedules bills only for operating days; days with no service are free.
 - 2026-08-22: reviewed. Tip: read updatedUnix on a position fix to fade stale markers on a live map.
 - 2026-08-21: reviewed. Tip: read updatedUnix on a position fix to fade stale markers on a live map.
 - 2026-08-20: reviewed. Tip: use the ICAO code in name (for example UAE) to disambiguate a shared IATA code.
