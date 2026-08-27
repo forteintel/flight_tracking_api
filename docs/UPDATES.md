@@ -2,6 +2,7 @@
 
 The guides and endpoint reference on this page are reviewed on a regular cadence. Most recent touch points (newest first):
 
+- 2026-08-27: reviewed. Tip: the source field marks a position as live, partner or estimated.
 - 2026-08-26: reviewed. Tip: completed past flights are cached, so repeat lookups return instantly.
 - 2026-08-25: reviewed. Tip: completed past flights are cached, so repeat lookups return instantly.
 - 2026-08-24: reviewed. Tip: /schedules bills only for operating days; days with no service are free.
