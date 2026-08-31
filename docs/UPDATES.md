@@ -2,6 +2,7 @@
 
 The guides and endpoint reference on this page are reviewed on a regular cadence. Most recent touch points (newest first):
 
+- 2026-08-31: reviewed. Tip: leading zeros do not matter: EK072 and EK72 are the same flight.
 - 2026-08-30: reviewed. Tip: airspace inbound to an airport powers an arrivals board with minutes to arrival.
 - 2026-08-29: reviewed. Tip: airspace inbound to an airport powers an arrivals board with minutes to arrival.
 - 2026-08-28: reviewed. Tip: the source field marks a position as live, partner or estimated.
