@@ -211,4 +211,4 @@ except FlightNerveError as e:
 * [FlightNerve API documentation](https://flightnerve.com/doc/)
 * [Get a free API key](https://flightnerve.com/register/)
 
-_Last reviewed: 2026-08-31._
+_Last reviewed: 2026-09-01._
