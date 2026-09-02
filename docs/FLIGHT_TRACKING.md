@@ -185,4 +185,4 @@ Pair a watchlist with a webhook so your system is pushed an update when a flight
 * [FlightNerve API documentation](https://flightnerve.com/doc/)
 * [Get a free API key](https://flightnerve.com/register/)
 
-_Last reviewed: 2026-09-01._
+_Last reviewed: 2026-09-02._
