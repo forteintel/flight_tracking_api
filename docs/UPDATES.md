@@ -2,6 +2,7 @@
 
 The guides and endpoint reference on this page are reviewed on a regular cadence. Most recent touch points (newest first):
 
+- 2026-09-09: reviewed. Tip: use the ICAO code in name (for example UAE) to disambiguate a shared IATA code.
 - 2026-09-08: reviewed. Tip: use the ICAO code in name (for example UAE) to disambiguate a shared IATA code.
 - 2026-09-07: reviewed. Tip: /track returns an empty array and costs nothing when a flight is not airborne.
 - 2026-09-06: reviewed. Tip: /track returns an empty array and costs nothing when a flight is not airborne.
