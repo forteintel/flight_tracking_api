@@ -2,6 +2,7 @@
 
 A new real flight example is added here every day: the request and the live JSON response from the FlightNerve `/airline` endpoint. Bring your own key from [flightnerve.com/register](https://flightnerve.com/register/).
 
+- [2026-09-23-SQ25](2026-09-23-SQ25.md)
 - [2026-09-22-BA286](2026-09-22-BA286.md)
 - [2026-09-21-EK72](2026-09-21-EK72.md)
 - [2026-09-20-EK1](2026-09-20-EK1.md)
