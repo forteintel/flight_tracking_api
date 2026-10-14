@@ -2,6 +2,7 @@
 
 The guides and endpoint reference on this page are reviewed on a regular cadence. Most recent touch points (newest first):
 
+- 2026-10-14: reviewed. Tip: pass depap to pin one leg of a multi leg flight and bill a single credit.
 - 2026-10-13: reviewed. Tip: departure and arrival times are local to their airport; use the ISO fields for math.
 - 2026-10-12: reviewed. Tip: departure and arrival times are local to their airport; use the ISO fields for math.
 - 2026-10-11: reviewed. Tip: leading zeros do not matter: EK072 and EK72 are the same flight.
@@ -41,4 +42,3 @@ The guides and endpoint reference on this page are reviewed on a regular cadence
 - 2026-09-07: reviewed. Tip: /track returns an empty array and costs nothing when a flight is not airborne.
 - 2026-09-06: reviewed. Tip: /track returns an empty array and costs nothing when a flight is not airborne.
 - 2026-09-05: reviewed. Tip: pass depap to pin one leg of a multi leg flight and bill a single credit.
-- 2026-09-04: reviewed. Tip: pass depap to pin one leg of a multi leg flight and bill a single credit.
