@@ -2,6 +2,7 @@
 
 The guides and endpoint reference on this page are reviewed on a regular cadence. Most recent touch points (newest first):
 
+- 2026-10-22: reviewed. Tip: /schedules bills only for operating days; days with no service are free.
 - 2026-10-21: reviewed. Tip: read updatedUnix on a position fix to fade stale markers on a live map.
 - 2026-10-20: reviewed. Tip: read updatedUnix on a position fix to fade stale markers on a live map.
 - 2026-10-19: reviewed. Tip: use the ICAO code in name (for example UAE) to disambiguate a shared IATA code.
@@ -41,4 +42,3 @@ The guides and endpoint reference on this page are reviewed on a regular cadence
 - 2026-09-15: reviewed. Tip: completed past flights are cached, so repeat lookups return instantly.
 - 2026-09-14: reviewed. Tip: completed past flights are cached, so repeat lookups return instantly.
 - 2026-09-13: reviewed. Tip: /schedules bills only for operating days; days with no service are free.
-- 2026-09-12: reviewed. Tip: /schedules bills only for operating days; days with no service are free.
