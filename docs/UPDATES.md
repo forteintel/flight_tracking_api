@@ -2,6 +2,7 @@
 
 The guides and endpoint reference on this page are reviewed on a regular cadence. Most recent touch points (newest first):
 
+- 2026-10-27: reviewed. Tip: the source field marks a position as live, partner or estimated.
 - 2026-10-26: reviewed. Tip: the source field marks a position as live, partner or estimated.
 - 2026-10-25: reviewed. Tip: completed past flights are cached, so repeat lookups return instantly.
 - 2026-10-24: reviewed. Tip: completed past flights are cached, so repeat lookups return instantly.
@@ -41,4 +42,3 @@ The guides and endpoint reference on this page are reviewed on a regular cadence
 - 2026-09-20: reviewed. Tip: leading zeros do not matter: EK072 and EK72 are the same flight.
 - 2026-09-19: reviewed. Tip: airspace inbound to an airport powers an arrivals board with minutes to arrival.
 - 2026-09-18: reviewed. Tip: airspace inbound to an airport powers an arrivals board with minutes to arrival.
-- 2026-09-17: reviewed. Tip: the source field marks a position as live, partner or estimated.
