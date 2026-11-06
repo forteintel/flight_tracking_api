@@ -2,6 +2,7 @@
 
 The guides and endpoint reference on this page are reviewed on a regular cadence. Most recent touch points (newest first):
 
+- 2026-11-06: reviewed. Tip: /track returns an empty array and costs nothing when a flight is not airborne.
 - 2026-11-05: reviewed. Tip: /track returns an empty array and costs nothing when a flight is not airborne.
 - 2026-11-04: reviewed. Tip: pass depap to pin one leg of a multi leg flight and bill a single credit.
 - 2026-11-03: reviewed. Tip: pass depap to pin one leg of a multi leg flight and bill a single credit.
@@ -41,4 +42,3 @@ The guides and endpoint reference on this page are reviewed on a regular cadence
 - 2026-09-30: reviewed. Tip: read updatedUnix on a position fix to fade stale markers on a live map.
 - 2026-09-29: reviewed. Tip: use the ICAO code in name (for example UAE) to disambiguate a shared IATA code.
 - 2026-09-28: reviewed. Tip: use the ICAO code in name (for example UAE) to disambiguate a shared IATA code.
-- 2026-09-27: reviewed. Tip: /track returns an empty array and costs nothing when a flight is not airborne.
