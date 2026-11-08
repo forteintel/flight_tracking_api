@@ -2,6 +2,7 @@
 
 The guides and endpoint reference on this page are reviewed on a regular cadence. Most recent touch points (newest first):
 
+- 2026-11-08: reviewed. Tip: use the ICAO code in name (for example UAE) to disambiguate a shared IATA code.
 - 2026-11-07: reviewed. Tip: use the ICAO code in name (for example UAE) to disambiguate a shared IATA code.
 - 2026-11-06: reviewed. Tip: /track returns an empty array and costs nothing when a flight is not airborne.
 - 2026-11-05: reviewed. Tip: /track returns an empty array and costs nothing when a flight is not airborne.
@@ -41,4 +42,3 @@ The guides and endpoint reference on this page are reviewed on a regular cadence
 - 2026-10-02: reviewed. Tip: /schedules bills only for operating days; days with no service are free.
 - 2026-10-01: reviewed. Tip: read updatedUnix on a position fix to fade stale markers on a live map.
 - 2026-09-30: reviewed. Tip: read updatedUnix on a position fix to fade stale markers on a live map.
-- 2026-09-29: reviewed. Tip: use the ICAO code in name (for example UAE) to disambiguate a shared IATA code.
